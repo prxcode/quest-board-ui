@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Adventurer's Guild Quest Board — browse and accept quests online." />
+  <title>Quest Board — Adventurer's Guild</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <h1 class="header-title">The Adventurer's Guild</h1>
+    <p class="header-subtitle">Quest Board</p>
+  </header>
+
+  <main class="main">
+    <article class="quest-card">
+      <span class="quest-badge">Legendary</span>
+
+      <h2 class="quest-title">Defeat the CSS Dragon</h2>
+
+      <p class="quest-description">
+        A fearsome dragon forged from tangled stylesheets terrorises the Kingdom of Layouts.
+        Brave adventurer, wield your Flexbox and Grid skills to vanquish the beast
+        and restore responsive harmony to the realm.
+      </p>
+
+      <div class="quest-details">
+        <div class="detail">
+          <span class="detail-label">Reward</span>
+          <span class="detail-value">500 Gold</span>
+        </div>
+        <div class="detail">
+          <span class="detail-label">Difficulty</span>
+          <span class="detail-value detail-value--legendary">Legendary</span>
+        </div>
+        <div class="detail">
+          <span class="detail-label">Deadline</span>
+          <span class="detail-value">3 Days</span>
+        </div>
+      </div>
+
+      <button class="btn-accept" id="acceptQuestBtn" type="button">Accept Quest</button>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <p>2026 Adventurer's Guild. All quests are final.</p>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
