@@ -1,0 +1,198 @@
+/* Base reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #e8e2f4;
+  background: linear-gradient(160deg, #0b0e1a, #1a1035);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 3rem 1rem 1rem;
+}
+
+.header-title {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  color: #ffd866;
+}
+
+.header-subtitle {
+  font-family: 'Cinzel', serif;
+  font-size: 0.9rem;
+  color: #9b93b0;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-top: 0.25rem;
+}
+
+/* Main layout */
+.main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+/* Quest card */
+.quest-card {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  background: rgba(22, 18, 42, 0.85);
+  border: 1px solid rgba(185, 155, 255, 0.25);
+  border-radius: 16px;
+  padding: 2.5rem 2rem 2rem;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quest-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.6);
+}
+
+/* Badge */
+.quest-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+  color: #fff;
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+/* Title */
+.quest-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.35rem;
+  color: #ffd866;
+  margin-bottom: 1rem;
+}
+
+/* Description */
+.quest-description {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #9b93b0;
+  margin-bottom: 1.5rem;
+}
+
+/* Details row */
+.quest-details {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 1rem 0;
+  margin-bottom: 1.5rem;
+  border-top: 1px solid rgba(185, 155, 255, 0.12);
+  border-bottom: 1px solid rgba(185, 155, 255, 0.12);
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  flex: 1;
+}
+
+.detail-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #9b93b0;
+}
+
+.detail-value {
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.detail-value--legendary {
+  color: #ff6b6b;
+}
+
+/* Accept button */
+.btn-accept {
+  display: block;
+  width: 100%;
+  padding: 0.85rem;
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #fff;
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 18px rgba(124, 58, 237, 0.35);
+}
+
+.btn-accept:hover:not(:disabled) {
+  background: linear-gradient(135deg, #6d28d9, #9333ea);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(124, 58, 237, 0.5);
+}
+
+.btn-accept:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+/* Button disabled state */
+.btn-accept:disabled {
+  background: #374151;
+  color: #9ca3af;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Accepted card glow */
+.quest-card.accepted {
+  border-color: #4ceb8b;
+  box-shadow: 0 0 30px rgba(76, 235, 139, 0.15), 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer */
+.footer {
+  padding: 1.5rem 1rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #9b93b0;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .quest-card {
+    padding: 2rem 1.25rem 1.5rem;
+  }
+
+  .quest-details {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .detail {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
